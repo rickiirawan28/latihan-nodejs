@@ -11,5 +11,8 @@ app.get('/', (req, res) => {
     res.send('Welcome in expressjs');
 });
 
+const users = require('./route/users');
+app.use('/users', users);
+
 const port = 3000;
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
